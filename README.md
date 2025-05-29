@@ -10,4 +10,4 @@
 **Instructions to run:**
 1. Navigate to **server** folder.
 2. Type command **node index.js** to start backend.
-3. In the root/project folder, type command**npm start** to run web server.
+3. In the root/project folder, type command **npm start** to run web server.
