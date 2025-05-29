@@ -8,6 +8,6 @@
 7.  Implemented **router guards**.
 
 **Instructions to run:**
-1. navigate to **server** folder.
-2. **node index.js** to start backend.
-3. In the root/project folder, **npm start** to run web server.
+1. Navigate to **server** folder.
+2. Type command **node index.js** to start backend.
+3. In the root/project folder, type command**npm start** to run web server.
