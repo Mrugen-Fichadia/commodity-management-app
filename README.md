@@ -7,3 +7,7 @@
 6. **Role-based** UI restrictions.
 7.  Implemented **router guards**.
 
+**Instructions to run:**
+1. navigate to **server** folder.
+2. **node index.js** to start backend.
+3. In the root/project folder, **npm start** to run web server.
