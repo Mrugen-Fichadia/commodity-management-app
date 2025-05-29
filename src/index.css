@@ -11,3 +11,441 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.login {
+  background-image: url('../src/images/login_bkg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  justify-content: center;
+  align-items: center;
+}
+
+body.dark .login{
+  background-image: none;
+  background-color: black;
+}
+
+.login button{
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background-color: rgb(39, 121, 175);
+  color: white;
+  font-size: 16px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.login button:hover {
+  background-color: rgb(55, 164, 237);
+  border: 2px solid rgb(12, 104, 202);
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background-color: rgb(45, 149, 49);
+  border: 2px solid transparent;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-container button:hover {
+  background-color: rgb(17, 179, 23);
+  border: 2px solid rgb(4, 131, 27);
+}
+
+.logout-button {
+  height: 35px;
+  padding: 5px 12px;
+  background-color: rgb(45, 149, 49);
+  border: 2px solid transparent;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logout-button:hover {
+  background-color: rgb(17, 179, 23);
+  border: 2px solid rgb(4, 131, 27);
+}
+
+.view-products-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://htmlcolors.com/gradients-images/73-light-green-gradient.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.dark .view-products-container{
+  background-image: none;
+  background-color: black;
+  color: white;
+}
+
+.view-products-container h2 {
+  margin-bottom: 1rem;
+}
+
+.product-grid {
+  flex: 1;
+  overflow-y: auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 250px);
+  gap: 30px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.product-card {
+  position: relative;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 250px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.dark .product-card {
+  background-color: rgb(75, 75, 75);
+}
+
+.delete-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.delete-button:hover {
+  background: darkred;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+body.dark .product-card:hover {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 1);
+}
+
+.product-card>*:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.product-title {
+  margin: 8px 0 4px;
+  font-size: 18px;
+}
+
+.product-text {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.product-text.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.top-navbar-left{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+}
+
+.top-navbar-left h2{
+  padding-bottom: 5px;
+}
+
+body.dark .mdc-dialog{
+  background-color: black;
+  container-fill-color: black;
+}
+
+.add-product-button{
+  height: 35px;
+  padding: 5px 12px;
+  background-color: rgb(45, 149, 49);
+  border: 2px solid transparent;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.add-product-button:hover {
+  background-color: rgb(17, 179, 23);
+  border: 2px solid rgb(4, 131, 27);
+}
+
+.dashboard-button {
+  height: 35px;
+    padding: 5px 12px;
+    background-color: rgb(39, 121, 175);
+    border: 2px solid transparent;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dashboard-button:hover {
+  background-color: rgb(43, 149, 219);
+  border: 2px solid rgb(12, 104, 202);
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icons */
+.icon {
+  font-size: 18px;
+}
+
+/* Switch styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked+.slider {
+  background-color: #49e74e;
+}
+
+.switch input:checked+.slider::before {
+  transform: translateX(26px);
+}
+
+.product-details-container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  background-image: url("https://htmlcolors.com/gradients-images/73-light-green-gradient.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*background-color: #ccc;*/
+  overflow: hidden;
+}
+
+body.dark .product-details-container {
+  background-image: none;
+  background-color: #000000;
+  color: white;
+}
+
+.product-details-container input{
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+body.dark .product-details-container input {
+  background-color: #4d4d4d;
+  color: white
+}
+
+.product-details-container textarea {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+body.dark .product-details-container textarea{
+  background-color: #4d4d4d;
+  color: white
+}
+
+.product-details-container button {
+  height: 35px;
+  padding: 5px 12px;
+  background-color: rgb(45, 149, 49);
+  border: 2px solid transparent;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.product-details-container button:hover {
+  background-color: #11b317;
+  border: 2px solid rgb(4, 131, 27);
+}
+
+.dashboard-container {
+  padding-top: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background-image: url("https://htmlcolors.com/gradients-images/73-light-green-gradient.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.dark .dashboard-container {
+  background-image: none;
+  background-color: black;
+  color: white;
+}
+
+.bar-charts {
+  display: flex;
+  gap: 3%;
+  /*color: #007bff;*/
+}
+
+.sales-bar-chart {
+  padding: 20px;
+  width: 100%;
+  background-color: #e8e8e8;
+  border-radius: 12px;
+}
+
+body.dark .sales-bar-chart {
+  background-color: #333;
+}
+
+.revenue-bar-chart {
+  padding: 20px;
+  width: 100%;
+  background-color: #e8e8e8;
+  border-radius: 12px;
+}
+
+body.dark .revenue-bar-chart {
+  background-color: #333;
+}
+
+.most-sold-items {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.product-summary-card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.product-summary-card.light {
+  background: #f0f0f0;
+  color: #000;
+}
+
+.product-summary-card.dark {
+  background: #333;
+  color: #f0f0f0;
+}
