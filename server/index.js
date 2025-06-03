@@ -36,7 +36,8 @@ productDB.run(`
     quantity INTEGER,
     price REAL,
     description TEXT,
-    image_url TEXT
+    image_url TEXT,
+    sold INTEGER DEFAULT 0
   )
 `);
 
@@ -95,9 +96,9 @@ app.delete('/delete-user/:username', (req, res) => {
 
 
 app.post('/products', (req, res) => {
-  const { name, category, quantity, price, description, image_url } = req.body;
+  const { name, category, quantity, price, description, image_url, sold } = req.body;
   productDB.run(
-    `INSERT INTO products (name, category, quantity, price, description, image_url, sold = 0)
+    `INSERT INTO products (name, category, quantity, price, description, image_url, sold)
      VALUES (?, ?, ?, ?, ?, ?, ?)`,
     [name, category, quantity, price, description, image_url, sold],
     function (err) {

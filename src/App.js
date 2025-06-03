@@ -5,7 +5,6 @@ import './index.css';
 import Login from './pages/login';
 import StoreKeeper from './pages/view-products';
 import Manager from './pages/dashboard';
-import ProtectedRoute from './widgets/protectedRoutes';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -37,8 +36,6 @@ function App() {
     }
   }, [darkMode]);
 
-  const toggleDarkMode = () => setDarkMode(prev => !prev);
-
   return (
     <Router>
       <Routes>
@@ -63,7 +60,7 @@ function App() {
         <Route
           path="/dashboard"
           element={
-            <ProtectedRoute allowDashboard={true}>
+            <ProtectedRoute allowedRoles={['manager', 'admin']}>
               <Manager />
             </ProtectedRoute>
           }
